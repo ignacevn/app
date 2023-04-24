@@ -9,6 +9,7 @@ import {
 
 import LineChart from "./Charts/LineChart";
 import LineChart2 from "./Charts/LineChart2";
+import TimeLine from ".Charts/TimeLine";
 
 import "./App.css";
 
@@ -37,15 +38,15 @@ const WebDashboard = () => {
         <DashboardLayoutComponent
           created={onCreate}
           columns={4}
+          rows={5}
           id="predefine_dashboard"
-          cellSpacing={[5, 5]}
           resizeStop={onPanelResize}
           allowResizing={true}
-          allowDragging={true}
+          allowDragging={false}
         >
           <PanelsDirective>
             <PanelDirective
-              header=""
+              header="1"
               content={LineChart}
               sizeX={1}
               sizeY={3}
@@ -53,36 +54,36 @@ const WebDashboard = () => {
               col={0}
             ></PanelDirective>
             <PanelDirective
-              header=""
+              header="2"
               content={LineChart}
+              sizeX={1}
+              sizeY={2}
+              row={3}
+              col={0}
+            ></PanelDirective>
+            <PanelDirective
+              header="3"
+              content={TimeLine}
               sizeX={3}
               sizeY={2}
               row={0}
-              col={4}
+              col={1}
             ></PanelDirective>
             <PanelDirective
-              header=""
-              content={LineChart}
+              header="4"
+              content={TimeLine2}
               sizeX={3}
               sizeY={2}
-              row={1}
-              col={4}
-            ></PanelDirective>
-            <PanelDirective
-              header=""
-              content={LineChart}
-              sizeX={1}
-              sizeY={3}
               row={2}
-              col={0}
+              col={1}
             ></PanelDirective>
             <PanelDirective
-              header=""
+              header="5"
               content={LineChart}
               sizeX={3}
               sizeY={1}
-              row={2}
-              col={4}
+              row={4}
+              col={1}
             ></PanelDirective>
           </PanelsDirective>
         </DashboardLayoutComponent>
