@@ -8,8 +8,8 @@ import {
 } from "@syncfusion/ej2-react-layouts";
 
 import LineChart from "./Charts/LineChart";
-import LineChart2 from "./Charts/LineChart2";
-import TimeLine from ".Charts/TimeLine";
+import TimeLine2 from "./Charts/TimeLine2";
+import TimeLine from "./Charts/TimeLine";
 
 import "./App.css";
 

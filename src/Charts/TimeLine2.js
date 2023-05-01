@@ -1,153 +1,21 @@
-import * as react from "react";
-import ProcessTimelineBar from 'progress-timeline-bar';
 
-import React, { useState, useEffect } from "react";
-import { PTBTemplateContext } from "../../src/components/PTBTemplateContext";
-import PTBTemplateMaterial from "../../src/template/PTBTemplateMaterial";
-import PTBListBox from "../../src/components/PTBListBox";
-import ProcessTimelineBar from "../../src/components/ProcessTimelineBar";
-import ProcessTimelineBarEvent from "../../src/components/ProcessTimelineEvent";
-import MaterialReceipt from "./components/details/MaterialReceipt";
-import ShipmentPackages from "./components/details/ShipmentPackages";
-import HeaderDetails from "./components/details/HeaderDetails";
-import {
-  FaTruckLoading,
-  FaPaperPlane,
-  FaRegCheckCircle,
-  FaBox,
-  FaTruckMoving
-} from "react-icons/fa";
-import { GoFileSubmodule } from "react-icons/go";
-import initReactFastclick from "react-fastclick";
-initReactFastclick();
+import { DataSet } from 'vis-data';
+import { Timeline } from 'vis-timeline';
 
-function App() {
-  var [mode, setMode] = useState("large");
-  var [shipData, setShipData] = useState();
+var items = new DataSet([
+  {id: 1, content: 'item 1', start: '2014-04-20'},
+  {id: 2, content: 'item 2', start: '2014-04-14'},
+  {id: 3, content: 'item 3', start: '2014-04-18'},
+  {id: 4, content: 'item 4', start: '2014-04-16', end: '2014-04-19'},
+  {id: 5, content: 'item 5', start: '2014-04-25'},
+  {id: 6, content: 'item 6', start: '2014-04-27', type: 'point'}
+]);
 
-  useEffect(() => {
-    getShipData();
-    setInterval(() => {
-      getShipData();
-    }, 5000);
-  }, []);
+var container = document.getElementById('visualization');
 
-  var barStyleOptions = {
-    backgroundColor: "#c3dde0",
-    placeholderColor: "#ddeced",
-    eventCompletedColor: "#541919",
-    eventOnStatusColor: "#7d2828",
-    expandedColor: "#e3e3e3",
-    fontColor: "white",
-    barWidth: { large: 1040, small: 380 }
-  };
+// Configuration for the Timeline
+var options = {};
 
-  function getShipData() {
-    fetch("http://10.0.0.230:8000/api")
-      .then(response => {
-        return response.json();
-      })
-      .then(data => {
-        setShipData(data);
-      });
-  }
-
-  if (!shipData) {
-    return <div>Loading</div>;
-  }
-
-  return (
-    <div className="parent">
-      <div className="controls">
-        <h1>Process Timeline Bar React Component Demo</h1>
-        Mode ({mode}){" "}
-        <select
-          value={mode}
-          onChange={e => setMode(e.target.value)}
-          onBlur={e => setMode(e.target.value)}
-        >
-          <option key="1" value="large">
-            Large
-          </option>
-          <option key="2" value="small">
-            Small
-          </option>
-        </select>
-      </div>
-
-      {/* <div className="list"> */}
-      <PTBTemplateContext
-        template={PTBTemplateMaterial}
-        styleOptions={barStyleOptions}
-      >
-        <PTBListBox mode={mode}>
-          {shipData.map((shipment, index) => (
-            <ProcessTimelineBar
-              headerDetailPage={HeaderDetails}
-              key={index}
-              id={index}
-              title="SHIPMENT"
-              detail={shipment._number}
-              mode="large"
-              scrollableEvents="true"
-              status={shipment._status}
-              headerDetailsId={shipment._id}
-            >
-              <ProcessTimelineBarEvent
-                title="OPENED"
-                date={shipment._date_opened}
-                color="#7699c2"
-                expandedHeight={280}
-                icon={GoFileSubmodule}
-              >
-                <ShipmentPackages />
-              </ProcessTimelineBarEvent>
-              <ProcessTimelineBarEvent
-                title="RECEIVED"
-                date={shipment._date_received}
-                color="#6583a6"
-                expandedHeight={300}
-                icon={FaTruckLoading}
-              >
-                <MaterialReceipt />
-              </ProcessTimelineBarEvent>
-              <ProcessTimelineBarEvent
-                title="PACKED"
-                date={shipment._date_packed}
-                color="#4a75a1"
-                expandedHeight={400}
-                icon={FaBox}
-              />
-              <ProcessTimelineBarEvent
-                title="SHIPPED"
-                date={shipment._date_shipped}
-                color="#3f658a"
-                expandedHeight={160}
-                icon={FaTruckMoving}
-              />
-              <ProcessTimelineBarEvent
-                title="IN TRANSIT"
-                date={shipment._date_intransit}
-                color="#325373"
-                expandedHeight={200}
-                icon={FaPaperPlane}
-              />
-              <ProcessTimelineBarEvent
-                title="ARRIVED"
-                date={shipment._date_arrived}
-                color="#1e4566"
-                expandedHeight={270}
-                icon={FaRegCheckCircle}
-              >
-                <ShipmentPackages />
-              </ProcessTimelineBarEvent>
-            </ProcessTimelineBar>
-          ))}
-        </PTBListBox>
-      </PTBTemplateContext>
-      {/* </div> */}
-    </div>
-  );
-}
-vbjkdsln,
+// Create a Timeline
+var TimeLine2 = new Timeline(container, items, options);
 export default TimeLine2;
