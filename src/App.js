@@ -10,7 +10,7 @@ import {
 import LineChart from "./Charts/LineChart";
 import TimeLine2 from "./Charts/TimeLine2";
 import TimeLine from "./Charts/TimeLine";
-
+import PatientProfile from "./Charts/PatientProfile";
 import "./App.css";
 
 const WebDashboard = () => {
@@ -55,7 +55,7 @@ const WebDashboard = () => {
             ></PanelDirective>
             <PanelDirective
               header="2"
-              content={LineChart}
+              content={PatientProfile}
               sizeX={1}
               sizeY={2}
               row={3}
