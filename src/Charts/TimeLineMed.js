@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import * as vis from 'vis-timeline';
 import 'vis-timeline/dist/vis-timeline-graph2d.min.css';
 
-const TimeLine2 = () => {
+const TimeLineMed = () => {
   const timelineRef = useRef(null);
 
   useEffect(() => {
@@ -35,4 +35,4 @@ const TimeLine2 = () => {
   return <div ref={timelineRef} />;
 };
 
-export default TimeLine2;
+export default TimeLineMed;

@@ -1,41 +1,14 @@
-import * as React from "react";
-import HorizontalTimeline from 'react-horizontal-timeline';
+import React from "react";
+import './PatientProfile.css';
 
-/*
-Format: YYYY-MM-DD
-Note: Make sure dates are sorted in increasing order
-*/
-const VALUES = [
-    '2008-06-01',
-    '2010-06-01',
-    '2013-06-01',
-    '2015-03-01',
-    '2019-01-01',
-    '2019-06-17',
-    '2019-08-01',
-];
-
-export default class TimeLine extends React.Component {
-  state = { value: 0, previous: 0 };
-
-  render() {
+const OtherHealth = () => {
     return (
-      <div>
-        {/* Bounding box for the Timeline */}
-        <div style={{ width: '60%', height: '100px', margin: '0 auto' }}>
-          <HorizontalTimeline
-            index={this.state.value}
-            indexClick={(index) => {
-              this.setState({ value: index, previous: this.state.value });
-            }}
-            values={ VALUES } />
-        </div>
-        <div className='text-center'>
-          {/* any arbitrary component can go here */}    
-          {this.state.value}
-        </div>
+      <div className="dashboard-panel">
+        <h2>Other health issues</h2>
+        <p>Allergiën: Jodiumallergie</p>
+        <p>Operatie knie</p>
       </div>
     );
-  }
-}
+  };
 
+export default OtherHealth;

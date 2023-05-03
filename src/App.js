@@ -8,9 +8,10 @@ import {
 } from "@syncfusion/ej2-react-layouts";
 
 import LineChart from "./Charts/LineChart";
-import TimeLine2 from "./Charts/TimeLine2";
+import TimeLineMed from "./Charts/TimeLineMed";
 import TimeLine from "./Charts/TimeLine";
 import PatientProfile from "./Charts/PatientProfile";
+import OtherHealth from "./Charts/OtherHealth";
 import "./App.css";
 
 const WebDashboard = () => {
@@ -38,7 +39,7 @@ const WebDashboard = () => {
         <DashboardLayoutComponent
           created={onCreate}
           columns={4}
-          rows={5}
+          rows={4}
           id="predefine_dashboard"
           resizeStop={onPanelResize}
           allowResizing={true}
@@ -47,18 +48,18 @@ const WebDashboard = () => {
           <PanelsDirective>
             <PanelDirective
               header="1"
-              content={LineChart}
+              content={PatientProfile}
               sizeX={1}
-              sizeY={3}
+              sizeY={2}
               row={0}
               col={0}
             ></PanelDirective>
             <PanelDirective
               header="2"
-              content={PatientProfile}
+              content={OtherHealth}
               sizeX={1}
               sizeY={2}
-              row={3}
+              row={2}
               col={0}
             ></PanelDirective>
             <PanelDirective
@@ -71,7 +72,7 @@ const WebDashboard = () => {
             ></PanelDirective>
             <PanelDirective
               header="4"
-              content={TimeLine2}
+              content={TimeLineMed}
               sizeX={3}
               sizeY={2}
               row={2}
