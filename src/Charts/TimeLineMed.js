@@ -13,19 +13,28 @@ const TimeLineMed = () => {
     id: index,
     content: medication.name}));
 
-    const mappedData = Medication.map((medication, index) => ({
+    const mappedData = Medication.map((medication, index) => {
+
+      let type = '';
+      if (medication.stopDate === "") {
+        type = 'box';
+      } else {
+        type = 'range';
+      }
+      
+      return{
       id: index,
       content: medication.name,
       start: new Date(medication.startDate),
-      stop: new Date(medication.stopDate),
-      title: medication.date + ":" + medication.medicine,
-      group: index,})
+      end: new Date(medication.stopDate),
+      title: medication.startDate + "-" + medication.stopDate + ":" + medication.name,
+      group: index,
+      type,};}
     );
 
     
 //opties aanpassen
-    const options = {editable: true //can be true or false, kunnen editable ook verfijnen in options maar ook per dataitem of groep veranderen
-     };
+    const options = {}
 
     const timeline = new vis.Timeline(container, mappedData, mappedGroups, options);
 
