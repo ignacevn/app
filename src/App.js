@@ -7,15 +7,13 @@ import {
   PanelDirective,
 } from "@syncfusion/ej2-react-layouts";
 
-
-import TimeLineMed from "./Charts/TimeLineMed";
 import ChangeDisplay from "./Charts/ChangeDisplay";
+import ChangeDisplay2 from "./Charts/ChangeDisplay2.js";
 import PatientProfile from "./Charts/PatientProfile";
 import OtherHealth from "./Charts/OtherHealth";
 import Consultation from "./Charts/Consultation";
-import MyChart from "./Charts/LineChart2";
+
 import "./App.css";
-import LineChart from "./Charts/LineChart";
 
 const WebDashboard = () => {
   const onCreate = () => {
@@ -44,7 +42,7 @@ const WebDashboard = () => {
         <DashboardLayoutComponent
           created={onCreate}
           columns={4}
-          rows={4}
+          rows={3}
           id="predefine_dashboard"
           resizeStop={onPanelResize}
           allowResizing={true}
@@ -64,7 +62,7 @@ const WebDashboard = () => {
               content={OtherHealth}
               sizeX={1}
               sizeY={2}
-              row={2}
+              row={1}
               col={0}
             ></PanelDirective>
             <PanelDirective
@@ -77,7 +75,7 @@ const WebDashboard = () => {
             ></PanelDirective>
             <PanelDirective
               header="4"
-              content={LineChart}
+              content={ChangeDisplay2}
               sizeX={3}
               sizeY={2}
               row={2}
@@ -86,10 +84,10 @@ const WebDashboard = () => {
             <PanelDirective
               header="5"
               content={Consultation}
-              sizeX={3}
+              sizeX={1}
               sizeY={1}
-              row={4}
-              col={1}
+              row={2}
+              col={0}
             ></PanelDirective>
           </PanelsDirective>
         </DashboardLayoutComponent>
