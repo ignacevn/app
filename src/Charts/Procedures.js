@@ -10,32 +10,53 @@ const Procedures = () => {
   useEffect(() => {
     const container = timelineRef.current;
     const procedures = data.procedures;
-    const Pathologie = data.Pathologie
-    const groups = [{ id: 1, content: '' },];
+    const pathologie = data.Pathologie
+    const groups = [{ id: 1, content: '' },{ id: 2, content: 'Pathologie' }];
 
-    // Map the procedures array to the required format for the Timeline library
-    const mappedData = procedures.map((procedure, index) => {
+    // Map the  array to the required format for the Timeline library
+    const mappedProcedures = procedures.map((procedure, index) => {
       let className = '';
 
-    if (procedure.ProcedureCode === 386792000) {
-      className = 'procedure-TURB';
-    } else if (procedure.ProcedureCode === 108034003) {
-      className = 'procedure-Cystectomy';
-    } else if(Pathologie.stage === 'CIS') {
-      className = 'stage-cis';
-    } else if (Pathologie.stage === 'Ta') {
-      className = 'stage-ta';
-    } else if (Pathologie.stage === 'T2') {
-      className = 'stage-t2';
-    }
-    return{
-      id: index,
-      content: procedure.name,
-      start: new Date(procedure.date),
-      title: procedure.date + ":" + procedure.name,
-      group: 1,
-      className}
+      if (procedure.ProcedureCode === 386792000) {
+        className = 'procedure-TURB';
+      } else if (procedure.ProcedureCode === 108034003) {
+        className = 'procedure-Cystectomy';
+      }
+      return {
+        id: index,
+        content: procedure.name,
+        start: new Date(procedure.date),
+        title: procedure.date + ':' + procedure.name,
+        group: 1,
+        className,
+      };
     });
+
+    const mappedPathologie = pathologie.map((p, index) => {
+      let className = '';
+      if (p.stage === 'CIS') {
+        className = 'stage-cis';
+      } else if (p.stage === 'Ta') {
+        className = 'stage-ta';
+      } else if (p.stage === 'T2') {
+        className = 'stage-t2';
+      }
+      return {
+        id: index + procedures.length,
+        content: p.stage + ':' + p.grade,
+        start: new Date(p.date),
+        title: `${p.date}: Stage ${p.stage}, Grade ${p.grade}`,
+        group: 2,
+        className,
+      };
+    });
+
+    const mappedData = [...mappedProcedures, ...mappedPathologie];
+
+    
+
+    // Add the pathologie data to the mappedData array
+   
 
     const options = {};
 

@@ -1,1 +1,13 @@
 @import url("https://cdn.syncfusion.com/ej2/material.css");
+
+  
+  .dashboard-title {
+    text-align: center;
+    padding-top: 70px;
+    margin: 0;
+  }
+
+  .dashboard-text {
+    text-align: center;
+    margin: 0;
+  }

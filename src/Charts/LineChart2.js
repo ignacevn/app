@@ -1,55 +1,38 @@
-import React, { useRef, useEffect } from 'react';
-import Chart from 'chart.js/auto';
+import React from 'react';
 import data from './Data2.json';
+import { Chart } from 'chart.js';
 
-const myChart = () => {
-  const chartRef = useRef(null);
+function MyChart() {
+  const canvasRef = React.useRef(null);
 
-  useEffect(() => {
-    // get the LabObservations data from the JSON
+  React.useEffect(() => {
+    const ctx = canvasRef.current.getContext('2d');
     const labObservations = data.LabObservations;
 
-    // extract the dates and values into separate arrays
     const dates = labObservations.map(obs => obs.date);
     const values = labObservations.map(obs => obs.value);
 
-    // create a new Chart instance
-    const chart = new Chart(chartRef.current, {
+    const chart = new Chart(ctx, {
       type: 'line',
       data: {
         labels: dates,
-        datasets: [{
-          label: 'Lab Observations',
-          data: values,
-          borderColor: 'rgb(75, 192, 192)',
-          fill: false
-        }]
+        datasets: [
+          {
+            label: 'LabObservations',
+            data: values,
+            borderColor: 'rgb(75, 192, 192)',
+            fill: false
+          },
+        ],
       },
-      options: {
-        scales: {
-          xAxes: [{
-            type: 'time',
-            time: {
-              unit: 'month'
-            }
-          }],
-          yAxes: [{
-            ticks: {
-              beginAtZero: true
-            }
-          }]
-        }
-      }
     });
 
-    // return a cleanup function that destroys the chart instance when the component unmounts
     return () => {
       chart.destroy();
     };
   }, []);
 
-  return () => {
-    <div ref={chartRef} />};
-};
+  return <canvas ref={canvasRef} />;
+}
 
-export default myChart;
+export default MyChart;
