@@ -6,9 +6,9 @@ const PatientProfile = () => {
     return (
       <div className="dashboard-panel">
         <h2>Patient Profile</h2>
-        <p>Naam: Dirk</p>
-        <p>Geboortedatum: 2/05/2023</p>
-        <p>Roker: {data.smoking}</p>
+        <p>Name: Dirk</p>
+        <p>Date of birth: 2/05/2023</p>
+        <p>Smoker: {data.smoking}</p>
       </div>
     );
   };

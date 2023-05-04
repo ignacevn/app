@@ -7,8 +7,7 @@ import Procedures from "./Procedures";
 
 /*
 Format: YYYY-MM-DD
-Note: Make sure dates are sorted in increasing order
-VALUES is gewoon zodat we van display kunnen veranderen
+VALUES is gewoon zodat we van display kunnen veranderen, moet in chronologsiche volgorde
 */
 const VALUES = [
     '2009-06-01',

@@ -12,7 +12,6 @@ import ChangeDisplay2 from "./Charts/ChangeDisplay2.js";
 import PatientProfile from "./Charts/PatientProfile";
 import OtherHealth from "./Charts/OtherHealth";
 import Consultation from "./Charts/Consultation";
-
 import "./App.css";
 
 const WebDashboard = () => {

@@ -71,10 +71,10 @@
             "stopDate": "", 
             "name": "aspirin"
             }],
-        "FamilyHistory" : {"code": 414205003,
+        "FamilyHistory" : [{"code": 414205003,
                 "text": "Family History of prostate cancer"
-        },
-        "Allergie": [{"date": "02/09/2014",
+        }],
+        "Allergy": [{"date": "02/09/2014",
                     "AgentCode":57272005,
                     "ReactionCode":735173007,
                     "agent":"Iodine compound",

@@ -16,22 +16,22 @@ const Consultation = () => {
 
   return (
     <div className="dashboard-panel">
-      <h2>Vorige Consultatie</h2>
+      <h2>Previous Consultation</h2>
       {latestProcedure && (
       <div>
         <p>Name: {latestProcedure.name}</p>
         <p>Date: {latestProcedure.date}</p>
       </div>
     )}
-    {!latestProcedure && <p>No procedures found</p>}
-      <h2>Huidige Consultatie</h2>
+    {!latestProcedure && <p>No procedures or consultations found</p>}
+      <h2>Next Consultation</h2>
       {upcomingProcedure && (
       <div>
         <p>Name: {upcomingProcedure.name}</p>
         <p>Date: {upcomingProcedure.date}</p>
       </div>
     )}
-    {!upcomingProcedure && <p>No upcoming procedures</p>}
+    {!upcomingProcedure && <p>No upcoming procedures or consultations</p>}
     </div>
     );
   };

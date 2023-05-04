@@ -6,21 +6,32 @@ const OtherHealth = () => {
   return (
     <div className="dashboard-panel">
       <h2>Other health issues</h2>
-      {data.Allergie.length > 0 && (
+      {data.Allergy.length > 0 && (
         <div>
           <h3>Allergy:</h3>
           <ul>
-            {data.Allergie.map((allergy, index) => (
+            {data.Allergy.map((allergy, index) => (
               <li key={index}>
                 Allergic to {allergy.agent}, with reaction: {allergy.reaction}
               </li>
             ))}
           </ul>
         </div>
-      )}
-
+        )},
+        {data.FamilyHistory.length > 0 && (
+          <div>
+            <h3>Family History:</h3>
+            <ul>
+              {data.FamilyHistory.map((history, index) => (
+                <li key={index}>
+                  {history.text}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )},
     </div>
-  );
+)
 };
 
 export default OtherHealth;
