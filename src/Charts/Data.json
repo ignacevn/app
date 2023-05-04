@@ -1,0 +1,60 @@
+
+   {
+    "smoking": "yes",
+    "procedures": [{"date" :"12/12/2021",
+    "code": 1193692007}]
+    ,
+    "LabObservations":[
+    {"date": "02/25/2016",
+    "test": "2857-1",
+    "value": "0.3",
+    "unit": "ng/mL"
+    },
+    {
+    "date": "2/01/2017",
+    "test": "2857-2",
+    "value": "0.4",
+    "unit": "ng/mL"
+    },
+    {
+    "date": "04/24/2017",
+    "test": "2857-3",
+    "value": "1.2",
+    "unit": "ng/mL"
+    },
+    {
+    "date": "12/13/2019",
+    "test": "2857-4",
+    "value": "1.6",
+    "unit": "ng/mL"
+    },
+    {
+    "date": "01/21/2020",
+    "test": "2857-5",
+    "value": "4.2",
+    "unit": "ng/mL"
+    },
+    {
+    "date": "10/27/2021",
+    "test": "2857-6",
+    "value": "7.8",
+    "unit": "ng/mL"
+    },
+    {
+    "date": "04/11/2022",
+    "test": "2857-7",
+    "value": "0.003",
+    "unit": "ng/mL"
+    },
+    {
+    "date": "12/5/2022",
+    "test": "2857-8",
+    "value": "0.001",
+    "unit": "ng/mL"
+    },
+    {
+    "date": "03/12/2023",
+    "test": "2857-9",
+    "value": "0.001",
+    "unit": "ng/mL"
+    }]}

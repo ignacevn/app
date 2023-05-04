@@ -1,5 +1,5 @@
 import React from "react";
-import './PatientProfile.css';
+import './Text.css';
 
 const OtherHealth = () => {
     return (

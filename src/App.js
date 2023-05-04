@@ -7,11 +7,12 @@ import {
   PanelDirective,
 } from "@syncfusion/ej2-react-layouts";
 
-import LineChart from "./Charts/LineChart";
+
 import TimeLineMed from "./Charts/TimeLineMed";
-import TimeLine from "./Charts/TimeLine";
+import ChangeDisplay from "./Charts/ChangeDisplay";
 import PatientProfile from "./Charts/PatientProfile";
 import OtherHealth from "./Charts/OtherHealth";
+import Consultation from "./Charts/Consultation";
 import "./App.css";
 
 const WebDashboard = () => {
@@ -50,7 +51,7 @@ const WebDashboard = () => {
               header="1"
               content={PatientProfile}
               sizeX={1}
-              sizeY={2}
+              sizeY={1}
               row={0}
               col={0}
             ></PanelDirective>
@@ -64,7 +65,7 @@ const WebDashboard = () => {
             ></PanelDirective>
             <PanelDirective
               header="3"
-              content={TimeLine}
+              content={ChangeDisplay}
               sizeX={3}
               sizeY={2}
               row={0}
@@ -80,7 +81,7 @@ const WebDashboard = () => {
             ></PanelDirective>
             <PanelDirective
               header="5"
-              content={LineChart}
+              content={Consultation}
               sizeX={3}
               sizeY={1}
               row={4}

@@ -1,0 +1,18 @@
+.procedure-TURB {
+    background-color: grey;
+  }
+.procedure-Cystectomy{
+    background-color: rgba(129, 178, 219, 0.541);
+  }
+
+.stage-cis {
+    background-color: yellow
+}
+
+.stage-ta {
+    background-color: orange
+}
+
+.stage-t2 {
+    background-color: red
+}

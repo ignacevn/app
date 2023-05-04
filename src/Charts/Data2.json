@@ -1,0 +1,81 @@
+{"smoking": "stopped",
+"procedures":[
+    {
+        "date": "03/30/2018",
+        "ProcedureCode": 386792000,
+        "name": "TURB"
+        },
+        {
+        "date": "05/03/2018",
+        "ProcedureCode": 386792000,
+        "name": "TURB"
+        },
+        {
+        "date": "02/01/2019",
+        "ProcedureCode": 386792000,
+        "name": "TURB"
+        },
+        {
+        "date": "08/03/2020",
+        "ProcedureCode": 108034003,
+        "name": "Cystectomy"
+        }],
+    "LabObservations": [{
+        "date": "10/25/2019",
+        "test": "98979-8",
+        "value": 88,
+        "unit": "mL/min"
+        },
+        {
+        "date": "02/01/2020",
+        "test": "98979-8",
+        "value": 104,
+        "unit": "mL/min"
+        },
+        {
+        "date": "06/09/2020",
+        "test": "98979-8",
+        "value": 110,
+        "unit": "mL/min"
+        },
+        {
+        "date": "04/14/2021",
+        "test": "98979-8",
+        "value": 67,
+        "unit": "mL/min"
+        }], 
+    "Pathologie" : [
+        {
+        "date": "04/14/2018",
+        "stage": "CIS",
+        "grade": "G1"
+        },
+        {
+        "date": "06/15/2019",
+        "stage": "Ta",
+        "grade": "G1"
+        },
+        {
+        "date": "02/09/2020",
+        "stage": "T2",
+        "grade": "G3"
+        }],
+        "Medication": [
+            {
+            "startDate": "06/15/2015",
+            "stopDate": "04/27/2018",
+            "name": "simvastatin"
+            },
+            {
+            "startDate": "03/02/2020",
+            "stopDate": "03/02/2020", 
+            "name": "aspirin"
+            }],
+        "FamilyHistory" : {"code": 414205003
+        },
+        "Allergie": {"date": "02/09/2014",
+                    "AgentCode":57272005,
+                    "ReactionCode":735173007
+                }
+    }
+

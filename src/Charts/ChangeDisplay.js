@@ -2,27 +2,36 @@ import * as React from "react";
 import HorizontalTimeline from 'react-horizontal-timeline';
 import LineChart from "./LineChart";
 import TimeLineMed from "./TimeLineMed";
+import Procedures from "./Procedures";
+
+
 /*
 Format: YYYY-MM-DD
 Note: Make sure dates are sorted in increasing order
+VALUES is gewoon zodat we van display kunnen veranderen
 */
 const VALUES = [
-    '2008-06-01',
+    '2009-06-01',
     '2010-06-01',
+    '2011-06-01',
+
 ];
 
 const LABELS = [
   'LineChart',
+  'Procedures',
   'Medication',
+  
 ];
 
 const DISPLAY = [
   <LineChart />,
+  <Procedures />,
   <TimeLineMed />,
 ];
 
 
-export default class TimeLine extends React.Component {
+export default class ChangeDisplay extends React.Component {
   state = { value: 0, previous: 0 };
 
   render() {
