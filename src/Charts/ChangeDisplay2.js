@@ -3,7 +3,7 @@ import HorizontalTimeline from 'react-horizontal-timeline';
 import LineChart from "./LineChart";
 import TimeLineMed from "./TimeLineMed";
 import Procedures from "./Procedures";
-
+import data from "./Data2.json";
 
 /*
 Format: YYYY-MM-DD
@@ -24,9 +24,9 @@ const LABELS = [
 ];
 
 const DISPLAY = [
-  <LineChart />,
-  <Procedures />,
-  <TimeLineMed />,
+  <LineChart data={data}/>,
+  <Procedures data={data}/>,
+  <TimeLineMed data={data}/>,
 ];
 
 

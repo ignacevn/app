@@ -1,8 +1,8 @@
 import React from "react";
 import './Text.css';
-import data from "./Data2.json"
 
-const PatientProfile = () => {
+
+const PatientProfile = ({data}) => {
     return (
       <div className="dashboard-panel">
         <h2>Patient Profile</h2>

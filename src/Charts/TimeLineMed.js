@@ -1,9 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import * as vis from 'vis-timeline';
 import 'vis-timeline/dist/vis-timeline-graph2d.min.css';
-import data from './Data2.json';
 
-const TimeLineMed = () => {
+const TimeLineMed = ({data}) => {
   const timelineRef = useRef(null);
 
   useEffect(() => {
@@ -41,7 +40,7 @@ const TimeLineMed = () => {
     return () => {
       timeline.destroy();
     };
-  }, []);
+  },);
 
   return <div ref={timelineRef} />;
 };

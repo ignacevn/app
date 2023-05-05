@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState } from "react";
 
 import "@syncfusion/ej2/material.css";
 import {
@@ -12,9 +13,13 @@ import ChangeDisplay2 from "./Charts/ChangeDisplay2.js";
 import PatientProfile from "./Charts/PatientProfile";
 import OtherHealth from "./Charts/OtherHealth";
 import Consultation from "./Charts/Consultation";
+import data from "./Charts/Data2.json";
 import "./App.css";
 
+
+
 const WebDashboard = () => {
+  const [loadedData, setLoadedData] = useState(data);
   const onCreate = () => {
     //logic goes here
   };
@@ -50,7 +55,7 @@ const WebDashboard = () => {
           <PanelsDirective>
             <PanelDirective
               header="1"
-              content={PatientProfile}
+              content={() => <PatientProfile data={loadedData} />}
               sizeX={1}
               sizeY={1}
               row={0}
@@ -58,7 +63,7 @@ const WebDashboard = () => {
             ></PanelDirective>
             <PanelDirective
               header="2"
-              content={OtherHealth}
+              content={() => <OtherHealth data={loadedData} />}
               sizeX={1}
               sizeY={2}
               row={1}
@@ -66,7 +71,7 @@ const WebDashboard = () => {
             ></PanelDirective>
             <PanelDirective
               header="3"
-              content={ChangeDisplay}
+              content= {ChangeDisplay}
               sizeX={3}
               sizeY={2}
               row={0}
@@ -74,7 +79,7 @@ const WebDashboard = () => {
             ></PanelDirective>
             <PanelDirective
               header="4"
-              content={ChangeDisplay2}
+              content= {ChangeDisplay2}
               sizeX={3}
               sizeY={2}
               row={2}
@@ -82,7 +87,7 @@ const WebDashboard = () => {
             ></PanelDirective>
             <PanelDirective
               header="5"
-              content={Consultation}
+              content={() => <Consultation data={loadedData} />}
               sizeX={1}
               sizeY={1}
               row={2}

@@ -1,8 +1,8 @@
 import React from "react";
 import './Text.css';
-import data from "./Data2.json"
 
-const Consultation = () => {
+
+const Consultation = ({data}) => {
   const procedures = data.procedures;
   procedures.sort((a, b) => new Date(a.date) - new Date(b.date));
 

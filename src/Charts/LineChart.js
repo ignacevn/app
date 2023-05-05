@@ -1,8 +1,8 @@
 import * as React from "react";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Tooltip, DateTime, LineSeries } from "@syncfusion/ej2-react-charts";
-import data from "./Data2.json"
+//import data from "./Data2.json"
 
-const LineChart = () => {
+const LineChart = ({data}) => {
 
   const dataValues = data.LabObservations.map((observation) => ({ x: new Date(observation.date), y: observation.value }));
 
