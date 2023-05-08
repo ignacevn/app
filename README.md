@@ -1,6 +1,7 @@
 In this Project we made a Medical History visualisation. We have chosen to visualize the medical history of a patient in a dashboard. 
+Unfortunately, some small elements, such as color at the time lines, are not visible on the PDF. To see the full dashboard you need to run the code
 
-[React App.pdf](https://github.com/ignacevn/app/files/11420377/React.App.pdf)
+[React App.pdf](https://github.com/ignacevn/app/files/11420377/React.App.pdf) 
 
 ## Installing App and dependencies
 
