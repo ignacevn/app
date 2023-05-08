@@ -1,11 +1,12 @@
 In this Project we made a Medical History visualisation. We have chosen to visualize the medical history of a patient in a dashboard. 
+
 [React App.pdf](https://github.com/ignacevn/app/files/11420377/React.App.pdf)
 
 ## Installing App and dependencies
 
 First of all, you need to clone the github link in your repository. 
 
-To run the script, you need to install all the dependencies. You can do this by the running the command 'npm install' in the project. If this doesn't work, try 'npm install --force'. 
+To run the script, you need to install all the dependencies. You can do this by the running the command 'npm install' in the project directory. If this doesn't work, try 'npm install --force'. 
 
 ## Available Scripts
 
