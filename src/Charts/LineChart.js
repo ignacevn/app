@@ -1,10 +1,18 @@
 import * as React from "react";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Tooltip, DateTime, LineSeries } from "@syncfusion/ej2-react-charts";
-//import data from "./Data2.json"
 
-const LineChart = ({data}) => {
-
+const LineChart = ({ data }) => {
   const dataValues = data.LabObservations.map((observation) => ({ x: new Date(observation.date), y: observation.value }));
+
+  let name = "";
+  let title = "";
+  if (data.LabObservations[0]?.test === "2857-1") {
+    name = "PSA (ng/mL)";
+    title = "Lab Observations: Prostate specific Ag";
+  } else if (data.LabObservations[0]?.test === "98979-8") {
+    name = "eGFR (mL/min)";
+    title = "Lab Observations: Glomerular Filtration Rate";
+  }
 
   return (
     <ChartComponent
@@ -13,7 +21,7 @@ const LineChart = ({data}) => {
         valueType: "DateTime",
         labelFormat: "MM/dd/yyyy",
       }}
-      title="Lab Observations: Prostate specific Ag"
+      title={title}
       legendSettings={{
         visible: true,
       }}
@@ -28,7 +36,7 @@ const LineChart = ({data}) => {
           xName="x"
           yName="y"
           type="Line"
-          name="PSA (ng/mL)"       //this is hardcoded, If time need to change
+          name={name}
         ></SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>

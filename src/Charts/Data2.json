@@ -1,4 +1,7 @@
-{"smoking": "stopped",
+
+{"name" : "Patient 2",
+"date" : "03/10/2023",
+"smoking": "stopped",
 "procedures":[
     {
         "date": "03/30/2018",

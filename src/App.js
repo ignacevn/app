@@ -17,7 +17,6 @@ import data from "./Charts/Data.json";
 import "./App.css";
 
 
-
 const WebDashboard = () => {
   const [loadedData, setLoadedData] = useState(data);
   const onCreate = () => {
@@ -71,7 +70,7 @@ const WebDashboard = () => {
             ></PanelDirective>
             <PanelDirective
               header="3"
-              content= {ChangeDisplay}
+              content={() => <ChangeDisplay data = {loadedData}/>}
               sizeX={3}
               sizeY={2}
               row={0}
@@ -79,7 +78,7 @@ const WebDashboard = () => {
             ></PanelDirective>
             <PanelDirective
               header="4"
-              content= {ChangeDisplay2}
+              content={() => <ChangeDisplay2 data = {loadedData}/>}
               sizeX={3}
               sizeY={2}
               row={2}

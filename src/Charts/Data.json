@@ -1,5 +1,6 @@
- 
- {
+
+ {"name": "Patient 1", 
+    "date" : "05/10/2023",
     "smoking": "yes",
     "procedures": [{"date" :"12/12/2021",
     "ProcedureCode": 1193692007,
