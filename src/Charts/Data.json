@@ -1,5 +1,4 @@
-
-   {
+ {
     "smoking": "yes",
     "procedures": [{"date" :"12/12/2021",
     "ProcedureCode": 1193692007,
@@ -60,26 +59,26 @@
        }],
    "Pathologie" : [],
    "Medication": [
-         {
-         "startDate": "05/18/2014",
-         "stopDate": null,
-         "name": "metformin"
-         },
-         {
-         "startDate": "05/31/2014",
-         "stopDate": "05/29/2017",
-         "name": "gabapentin"
-         },
-         {
-         "startDate": "09/21/2014",
-         "stopDate": null,
-         "name": "losartan"
-         },
-         {
-         "startDate": "04/20/2022",
-         "stopDate": null,
-         "name": "abiraterone acetate"
-         }],
+    {
+      "startDate": "05/18/2014",
+      "stopDate": null,
+      "name": "metformin"
+      },
+      {
+      "startDate": "05/31/2014",
+      "stopDate": "05/29/2017",
+      "name": "gabapentin"
+      },
+      {
+      "startDate": "09/21/2014",
+      "stopDate": null,
+      "name": "losartan"
+      },
+      {
+      "startDate": "04/20/2022",
+      "stopDate": null,
+      "name": "abiraterone acetate"
+      }],
      "FamilyHistory" : [{"code": 414205003,
                 "text": "Family History of prostate cancer"},
            {"code": 429740004,
