@@ -3,7 +3,7 @@ import HorizontalTimeline from 'react-horizontal-timeline';
 import LineChart from "./LineChart";
 import TimeLineMed from "./TimeLineMed";
 import Procedures from "./Procedures";
-import data from "./Data2.json";
+import data from "./Data.json";
 
 
 

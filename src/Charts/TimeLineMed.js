@@ -15,7 +15,7 @@ const TimeLineMed = ({data}) => {
     const mappedData = Medication.map((medication, index) => {
 
       let type = '';
-      if (medication.stopDate === "") {
+      if (medication.stopDate === null) {
         type = 'box';
       } else {
         type = 'range';

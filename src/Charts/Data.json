@@ -11,7 +11,7 @@
        "unit": "ng/mL"
        },
        {
-       "date": "2/01/2017",
+       "date": "01/02/2017",
        "test": "2857-2",
        "value": "0.4",
        "unit": "ng/mL"
@@ -61,23 +61,23 @@
    "Pathologie" : [],
    "Medication": [
          {
-         "startDate": 41777,
-         "stopDate": "",
+         "startDate": "05/18/2014",
+         "stopDate": null,
          "name": "metformin"
          },
          {
-         "startDate": 41790,
-         "stopDate": 42884,
+         "startDate": "05/31/2014",
+         "stopDate": "05/29/2017",
          "name": "gabapentin"
          },
          {
-         "startDate": 41903,
-         "stopDate": "",
+         "startDate": "09/21/2014",
+         "stopDate": null,
          "name": "losartan"
          },
          {
-         "startDate": 44671,
-         "stopDate": "",
+         "startDate": "04/20/2022",
+         "stopDate": null,
          "name": "abiraterone acetate"
          }],
      "FamilyHistory" : [{"code": 414205003,

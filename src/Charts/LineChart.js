@@ -13,7 +13,7 @@ const LineChart = ({data}) => {
         valueType: "DateTime",
         labelFormat: "MM/dd/yyyy",
       }}
-      title="Lab Observations: Glomerular filtration rate"
+      title="Lab Observations: Prostate specific Ag"
       legendSettings={{
         visible: true,
       }}
@@ -28,7 +28,7 @@ const LineChart = ({data}) => {
           xName="x"
           yName="y"
           type="Line"
-          name="GFR (mL/min)"       //this is hardcoded, If time need to change
+          name="PSA (ng/mL)"       //this is hardcoded, If time need to change
         ></SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>

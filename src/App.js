@@ -13,7 +13,7 @@ import ChangeDisplay2 from "./Charts/ChangeDisplay2.js";
 import PatientProfile from "./Charts/PatientProfile";
 import OtherHealth from "./Charts/OtherHealth";
 import Consultation from "./Charts/Consultation";
-import data from "./Charts/Data2.json";
+import data from "./Charts/Data.json";
 import "./App.css";
 
 

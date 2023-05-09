@@ -68,7 +68,7 @@
             },
             {
             "startDate": "03/02/2020",
-            "stopDate": "", 
+            "stopDate": null, 
             "name": "aspirin"
             }],
         "FamilyHistory" : [{"code": 414205003,
