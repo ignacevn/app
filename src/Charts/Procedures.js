@@ -16,7 +16,7 @@ const Procedures = ({data}) => {
     const mappedProcedures = procedures.map((procedure, index) => {
       let className = '';
 
-      if (procedure.ProcedureCode === 386792000) {
+      if (procedure.ProcedureCode === 386792000) {   //extra procedures toevoegen indien we meer data hebben
         className = 'procedure-TURB';
       } else if (procedure.ProcedureCode === 108034003) {
         className = 'procedure-Cystectomy';
@@ -33,18 +33,36 @@ const Procedures = ({data}) => {
 
     const mappedPathologie = pathologie.map((p, index) => {
       let className = '';
-      if (p.stage === 'CIS') {
+      let title = '';
+      let content = '';
+      if (p.stage === 'CIS') {  //stages van prostaatkanker zijn niet geprogrammeerd omdat we dit niet
+                                // als data hebben doorgekregen, dit zou dezelfde vorm als onderstaande hebben
+                                // hetzelfde geld bij T4 stadium
         className = 'stage-cis';
+        content= 'CIS';
+        title= `${p.date}: Stage Cis`;
       } else if (p.stage === 'Ta') {
         className = 'stage-ta';
+        content= 'Ta:' + p.grade;
+        title= `${p.date}: Stage Ta, Grade ${p.grade}`;
+      } else if (p.stage === 'T1') {
+        className = 'stage-t1';
+        content= 'T1:' + p.grade;
+        title= `${p.date}: Stage T1, Grade ${p.grade}`;
       } else if (p.stage === 'T2') {
         className = 'stage-t2';
-      }
+        content= 'T2:' + p.grade;
+        title= `${p.date}: Stage T2, Grade ${p.grade}`;
+      } else if (p.stage === 'T3') {
+        className = 'stage-t3';
+        content= 'T3:' + p.grade;
+        title= `${p.date}: Stage T3, Grade ${p.grade}`;
+      };
       return {
         id: index + procedures.length,
-        content: p.stage + ':' + p.grade,
+        content,
         start: new Date(p.date),
-        title: `${p.date}: Stage ${p.stage}, Grade ${p.grade}`,
+        title,
         group: 2,
         className,
       };
