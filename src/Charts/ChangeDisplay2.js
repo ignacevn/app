@@ -13,9 +13,9 @@ const ChangeDisplay2 = ({ data }) => {
   ];
 
   const LABELS = [
-    'LineChart',
-    'Procedures',
     'Medication',
+    'Procedures',
+    'LineChart',
   ];
 
   const [loadedData, setLoadedData] = useState(data);
@@ -28,9 +28,10 @@ const ChangeDisplay2 = ({ data }) => {
   };
 
   const DISPLAY = [
-    <LineChart data={loadedData} />,
-    <Procedures data={loadedData} />,
     <TimeLineMed data={loadedData} />,
+    <Procedures data={loadedData} />,
+    <LineChart data={loadedData} />,
+    
   ];
 
   return (

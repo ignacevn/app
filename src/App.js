@@ -13,7 +13,7 @@ import ChangeDisplay2 from "./Charts/ChangeDisplay2.js";
 import PatientProfile from "./Charts/PatientProfile";
 import OtherHealth from "./Charts/OtherHealth";
 import Consultation from "./Charts/Consultation";
-import data from "./Charts/Data.json";
+import data from "./Charts/Data2.json";
 import "./App.css";
 
 
@@ -49,7 +49,7 @@ const WebDashboard = () => {
           id="predefine_dashboard"
           resizeStop={onPanelResize}
           allowResizing={true}
-          allowDragging={true}
+          allowDragging={false}
         >
           <PanelsDirective>
             <PanelDirective
